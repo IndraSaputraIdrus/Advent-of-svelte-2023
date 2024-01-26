@@ -17,7 +17,7 @@
 		const index = Number(element.dataset.index);
 
 		if (weight + data.presents[index].weight > 100) {
-      let message = "Sorry, the weight exceeds the maximum weight limit for the sleigh."
+			let message = 'Sorry, the weight exceeds the maximum weight limit for the sleigh.';
 			return toast(message);
 		}
 
@@ -41,7 +41,7 @@
 
 <div>
 	<h2 class="mb-5 text-xl font-semibold">Day # 3 - Jingle Bell Balancer</h2>
-  <hr class="mb-5" />
+	<hr class="mb-5" />
 	<div class="flex flex-col items-start gap-5 lg:flex-row-reverse">
 		<div class="grid w-full grid-cols-2 gap-3 pb-5 lg:w-1/2">
 			<Card.Root class="col-span-1 border-indigo-500 bg-indigo-900 text-indigo-300">
