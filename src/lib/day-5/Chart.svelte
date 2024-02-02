@@ -1,7 +1,7 @@
 <script lang="ts">
 	import Chart from 'chart.js/auto';
 	import { onMount } from 'svelte';
-	import type { Task } from './+page';
+	import type { Task } from './index';
 
 	type Data = [string, { tasks: Task[] }][];
 
@@ -32,6 +32,7 @@
 	$: elfes = getElfes(tasks);
 	$: elfData = groupTask(tasks);
 
+	let loading = true;
 	let chart: Chart<'bar', number[], string>;
 	let ctx: HTMLCanvasElement;
 
@@ -68,6 +69,7 @@
 		}
 
 		window.addEventListener('resize', resizeChart);
+		loading = false;
 
 		return {
 			destroy() {
@@ -78,6 +80,6 @@
 	});
 </script>
 
-<div class="border p-5 rounded">
+<div class="rounded border p-5">
 	<canvas bind:this={ctx}></canvas>
 </div>
