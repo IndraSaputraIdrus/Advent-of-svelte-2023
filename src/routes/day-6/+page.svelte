@@ -1,5 +1,5 @@
 <script lang="ts">
-	import {Button} from '$lib/components/ui/button';
+	import { Button } from '$lib/components/ui/button';
 	import { onDestroy } from 'svelte';
 	import drum from '$lib/assets/civil-drum-2_120bpm.mp3';
 	import { browser } from '$app/environment';

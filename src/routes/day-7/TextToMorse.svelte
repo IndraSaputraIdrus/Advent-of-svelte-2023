@@ -73,8 +73,8 @@
 		</p>
 	{/if}
 
-	<div class="flex items-center gap-1.5 justify-end">
-			<Button disabled={started} on:click={async () => await play()}>play</Button>
-			<Button disabled={!started} on:click={() => (started = false)}>Stop</Button>
+	<div class="flex items-center justify-end gap-1.5">
+		<Button disabled={started} on:click={async () => await play()}>play</Button>
+		<Button disabled={!started} on:click={() => (started = false)}>Stop</Button>
 	</div>
 </div>
